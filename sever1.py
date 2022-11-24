@@ -40,7 +40,7 @@ if __name__ == '__main__':
             name  = " " + name #in case file read has an empty name that does not contain spaces 
             if(name.isspace()):
                 continue
-            sorted_dict.update({info_array[0]: tuple(info_array)}) #dictionary: key(string), value(tuple)
+            sorted_dict.update({info_array[0].strip(): tuple(info_array)}) #dictionary: key(string), value(tuple)
 
     #alphebetize keys of dictionary
     sorted_dict = OrderedDict(sorted(sorted_dict.items()))
